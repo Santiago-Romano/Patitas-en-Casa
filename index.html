@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Patitas en casa · Adopción de mascotas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="hero"><div class="trail" aria-hidden="true"><i class="pw"></i><i class="pw"></i><i class="pw"></i><i class="pw"></i><i class="pw"></i><i class="pw"></i><i class="pw"></i></div>
+  <button class="arch" id="feat" hidden></button><div class="top"><div class="brand">Patitas en casa</div><button class="admin-btn" id="adminBtn" hidden>Administrar</button></div>
+  <h1>Alguien te está esperando.</h1>
+  <p>Conocé a los perros y gatos que buscan familia. Entrá a cada ficha para ver más fotos, su carácter y cómo es convivir con ellos.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filtrar por sección"></div>
+</header>
+<main><i class="pw bgp a" aria-hidden="true"></i><i class="pw bgp b" aria-hidden="true"></i><div class="sect"><h2>Esperando familia</h2><span class="count" id="count"></span><span class="hair"></span><i class="pw" aria-hidden="true"></i><i class="pw" aria-hidden="true"></i><i class="pw" aria-hidden="true"></i></div><div class="grid" id="grid"></div></main>
+<footer><div class="fpaws" aria-hidden="true"><i class="pw"></i><i class="pw"></i><i class="pw"></i><i class="pw"></i><i class="pw"></i></div><div class="fbrand">Patitas en casa</div><p>Las fotos de las fichas fueron generadas con IA como material visual del proyecto. Quien administra la página puede reemplazarlas por fotos y videos reales.</p></footer>
+</div>
+<div class="overlay" id="ov" aria-hidden="true"><div class="panel det" role="dialog" aria-modal="true" aria-labelledby="dn">
+  <button class="close" data-act="close-ov">Cerrar</button>
+  <div><div class="mm" id="mm"></div><div class="thumbs" id="th"></div></div>
+  <div class="info">
+    <h2><span id="dn"></span><span class="age" id="da"></span></h2>
+    <p class="lead" id="dl"></p><p id="dd"></p>
+    <div class="traits" id="dt"></div>
+    <button class="cta" id="dc" data-act="adopt">Quiero adoptar</button>
+    <p class="note" id="dnote"></p>
+  </div>
+</div></div>
+<div class="overlay" id="fo" aria-hidden="true"><div class="panel fpanel" role="dialog" aria-modal="true" aria-labelledby="ft">
+  <button class="close" data-act="close-fo">Cerrar</button>
+  <h2 id="ft">Formulario de adopción</h2>
+  <p class="note" id="fs"></p>
+  <form id="af" onsubmit="return false" style="margin-top:18px">
+    <div class="two"><label class="fld"><span>Nombre y apellido *</span><input name="nombre" required autocomplete="name"></label>
+    <label class="fld"><span>Teléfono *</span><input name="tel" type="tel" required autocomplete="tel"></label></div>
+    <div class="two"><label class="fld"><span>Email</span><input name="email" type="email" autocomplete="email"></label>
+    <label class="fld"><span>Ciudad o barrio *</span><input name="zona" required></label></div>
+    <div class="two"><label class="fld"><span>Vivienda *</span><select name="viv" required><option value="">Elegí una</option><option>Casa con patio</option><option>Casa sin patio</option><option>Departamento con balcón</option><option>Departamento sin balcón</option></select></label>
+    <label class="fld"><span>La vivienda es *</span><select name="prop" required><option value="">Elegí una</option><option>Propia</option><option>Alquilada (con permiso)</option><option>Alquilada (sin consultar)</option></select></label></div>
+    <div class="two"><label class="fld"><span>¿Hay chicos en casa?</span><input name="chicos" placeholder="No / Sí, edades"></label>
+    <label class="fld"><span>Otros animales</span><input name="otros" placeholder="No / Sí, cuáles"></label></div>
+    <label class="fld"><span>¿Tuviste mascotas antes?</span><input name="exp"></label>
+    <label class="fld"><span>¿Por qué querés adoptar a este animal? *</span><textarea name="motivo" required></textarea></label>
+    <label class="chk"><input type="checkbox" name="ok" required> <span>Acepto una entrevista y una visita de seguimiento después de la adopción.</span></label>
+    <div class="acts"><button type="button" class="cta" data-act="send-wa">Enviar por WhatsApp</button><button type="button" class="cta ghost" data-act="send-mail" id="mailBtn">Enviar por email</button><button type="button" class="cta ghost" data-act="copy">Copiar solicitud</button></div>
+    <p class="note" id="fn" role="status"></p>
+  </form>
+</div></div>
+<div class="overlay" id="ad" aria-hidden="true"><div class="panel adm" role="dialog" aria-modal="true" aria-label="Panel de administración">
+  <button class="close" data-act="close-ad">Cerrar</button><div id="adc"></div>
+</div></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

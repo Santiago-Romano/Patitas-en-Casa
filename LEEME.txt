@@ -1,0 +1,17 @@
+Patitas en casa - Web de adopcion de mascotas
+
+Archivos
+- index.html: estructura de la pagina (encabezado, lista, detalle, formulario y panel).
+- style.css: todos los estilos (colores, tipografias, huellas, responsive, modo oscuro).
+- app.js: la logica (filtros, detalle con galeria, formulario de adopcion, panel de administrador).
+- data.js: los datos (secciones, WhatsApp/email de contacto y mascotas con sus descripciones y fotos).
+
+Como verla
+- Abri index.html en el navegador. Necesita internet solo para las tipografias de Google Fonts.
+
+Como cambiar mascotas, descripciones y contacto
+- Edita data.js. Para usar fotos o videos, copialos a una carpeta (por ejemplo fotos/) y agregalos en "media" de cada mascota: {"t":"i","u":"fotos/mora1.jpg"} para foto y {"t":"v","u":"fotos/mora.mp4"} para video.
+- Para recibir solicitudes por WhatsApp o email, completa "wa" (con codigo de pais, ej: 5491112345678) y "email" dentro de "settings".
+
+Panel de administrador
+- El boton "Administrar", la subida de archivos y "Guardar y publicar" funcionan solo dentro del hosting de Claude. Fuera de ahi el boton no aparece y se edita data.js a mano. Para un panel propio hace falta un backend (por ejemplo Firebase o Supabase).
